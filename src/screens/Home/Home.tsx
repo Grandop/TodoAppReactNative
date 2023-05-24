@@ -6,12 +6,14 @@ import CustomButton from '../../components/CustomButton/CustomButton';
 import TaskList from '../../components/TaskList/TaskList';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Task } from '../../Interfaces/TaskInterfaces';
+import SplashScreen from 'react-native-splash-screen';
 
 function Home() {
   const [task, setTask] = useState<{ key: string; task: string; }[]>([]);
   const [userInput, setUserInput] = useState('');
 
   useEffect(() => {
+    SplashScreen.hide();
     loadTasks()
   }, [])
 
