@@ -30,9 +30,7 @@ function Home() {
   }
 
   const addTask = () => {
-    if (userInput === '') {
-      return;
-    }
+    if (userInput === '') return;
   
     const newTask = {
       key: userInput,
