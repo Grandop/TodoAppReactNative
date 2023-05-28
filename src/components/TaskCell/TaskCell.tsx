@@ -6,7 +6,7 @@ import { TaskCellProps } from "../../Interfaces/TaskInterfaces";
 function TaskCell({ task, completeTask }: TaskCellProps) {
 
   const firstLetterUpper = (task: string): string => {
-    return task.charAt(0).toUpperCase() + task.slice(1).toLowerCase();
+    return task.charAt(0).toUpperCase() + task.slice(1);
   };
   
   return(
